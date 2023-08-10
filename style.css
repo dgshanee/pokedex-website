@@ -1,0 +1,119 @@
+@font-face{
+    src: url(fonts/pokemonFont.ttf);
+    font-family: pokemonFont
+}
+
+body{
+    text-align: center;
+}
+h1{
+    font-family: pokemonFont;
+    font-size: 100px;
+}
+button{
+    width: 200px;
+}
+#input-box{
+    text-align: center;
+    width: 800px;
+    height: 25px;
+}
+#search{
+    margin-top: 125px;
+}
+
+.card{
+    background-color: lightgrey;
+    text-align: left;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.card:hover{
+    background-color: grey;
+}
+.card-image{
+   width: 45px;
+   position: relative;
+   right:40px;
+}
+
+.card-title{
+    bottom: 50px;
+    left: 50px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.card-subtitle{
+    position: relative;
+    text-align: right;
+    bottom: 85px;
+    right: 20px;
+}
+
+.result-box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+}
+.type-image1{
+    position:relative;
+    left:135px;
+    bottom:115px;
+}
+.type-image2{
+    position:relative;
+    left:135px;
+    bottom:115px;
+}
+a:visited{
+    text-decoration: none;
+    color: black;
+}
+#loadingScreen{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    bottom: 0;
+    margin-bottom: 22%;
+}
+#loadingCircle{
+    animation-name: rotateLoadingCircle;
+    animation-duration: 3s;
+    height: 200px;
+    width: 200px;
+}
+@keyframes rotateLoadingCircle{
+    from{rotate: 0deg;}
+    to{rotate: 360deg;}
+}
+
+#mainBody{
+    display: none;
+}
+
+#damageButton{
+    border: 10px solid;
+    height: 100px;
+    width: 100px;
+}
+#pokemonButton{
+    border: 10px solid;
+}
+
+#damageCalcButton{
+    position: absolute;
+}

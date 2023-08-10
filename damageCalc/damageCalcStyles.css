@@ -1,0 +1,18 @@
+#flexContainer{
+    border: 1px solid;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+.attackDefend{
+    font-size: 150px;
+    margin: 0%;
+    color: maroon;
+}
+#attacker{
+    align-self: flex-end;
+}
+#defender{
+    height: 150px;
+}

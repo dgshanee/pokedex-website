@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Damage Calculator</title>
+    <link rel = "stylesheet" href = "pokemonStyles.css"/>
+</head>
+<body>
+    <div id="mainBody">
+        <div id="bodyWrapper">
+            <div id="baseWrapper">
+            <div id = "backButton" onclick = "backButtonPressed()">
+                <button>←</button>
+            </div>
+            <div class = "nameContainer">
+                <h1>
+                    <h1 id = "name">pokemon name</h1>
+                    <h2 id = "num">#1</h2>
+                </h1>
+            </div>
+            <img id = "mainImg" src = "/public/pokeball.png"/>
+            <div class = "attributeContainer">
+                <dl>
+                    <dt>Types:</dt>
+                    <img id = "type1" src = "/public/normal.png"/>
+                    <img id = "type2" src = "/public/normal.png"/>
+                </dl>
+                <dl>
+                    <dt>Size:</dt>
+                    <dd id = "htwt">bruh</dd>
+                </dl>
+                <dl>
+                    <dt>Abilities:</dt>
+                    <div id="abilitiesWrapper">
+                    </div>
+                </dl>
+            </div>
+            <table class = "stats">
+                <tbody>
+                    <tr>
+                        <th id = "statTitle">Base stats:</th>
+                        <td></td>
+                        <td style = width:200px;></td>
+                    </tr>
+                    <tr>
+                        <th>HP:</th>
+                        <td id = "hp" class = "stat">50</td>
+                        <td id = "hpBar" class = "statbar">
+                            <div class = "statbarContainer">
+                                <span></span>
+                            </div>
+                        </td>
+                        
+                    <tr>
+                        <th>Attack:</th>
+                        <td id = "atk" class = "stat">50</td>
+                        <td id = "atkBar" class = "statbar">
+                            <span></span>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <th>Defense:</th>
+                        <td id = "def" class = "stat">50</td>
+                        <td id = "defBar" class = "statbar">
+                            <span></span>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <th>Sp. Attack:</th>
+                        <td id = "spatk" class = "stat">50</td>
+                        <td id = "spatkBar" class = "statbar">
+                            <span></span>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <th>Sp. Defense:</th>
+                        <td id = "spdef" class = "stat">50</td>
+                        <td id = "spdefBar" class = "statbar">
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Speed:</th>
+                        <td id = "spd" class = "stat">50</td>
+                        <td id = "spdBar" class = "statbar">
+                            <span></span>
+                        </td>
+                        
+                    </tr>
+                    <tr id = "totalStats">
+                        <th>Total:</th>
+                        <td id = "totalNum">300</td>
+                    </tr>
+                </tbody>
+            </table>
+            <dl id = "evos">
+                <dt>Evolution: </dt>
+                    <div class = "evoContainers">
+                        <ul id="evoListOne">
+                            <dd id = "evo1">
+                                <img class = "smallSprite" id = "smallSprite1" src = "/public/pokeball.png"/>
+                                pokemon1
+                                →
+                            </dd>
+                        </ul>
+                        <ul id = "evoTwoList">
+                            <dd id = "evo2">
+                                <img class = "smallSprite" id = "smallSprite2" src = "/public/pokeball.png"/>
+                                pokemon2
+                                →
+                            </dd>
+                        </ul>
+                        <ul id="evoThreeList">
+                            <dd id = "evo3">
+                                <img class = "smallSprite" id = "smallSprite3" src = "/public/pokeball.png"/>
+                                pokemon3
+                            </dd>
+                        </ul>
+                </div>
+        </dl>
+        <div id = "moves">
+            <h3>Moves</h3>
+            <h4>Level-up:</h4>
+            <ul id = "moveSet">
+                <ul>
+                    <div class = "moveContainer">
+                        <li id = "levelCol">L5</li>
+                        <li id = "nameCol">Scratch</li>
+                        <li id = "typeCol">
+                            <img src = "/public/normal.png"/>
+                        </li>
+                        <li id = "accCol">
+                            <dt>Accuracy: </dt>
+                            <dd>100%</dd>
+                        </li>
+                        <li id = "ppCol">
+                            <dt>PP</dt>
+                            <dd>48</dd>
+                        </li>
+                    </div>
+                </ul>
+                <ul>
+                    <div class = "moveContainer">
+                        <li id = "levelCol">L10</li>
+                        <li id = "nameCol">Bite</li>
+                        <li id = "typeCol">
+                            <img src = "/public/normal.png"/>
+                        </li>
+                        <li id = "accCol">
+                            <dt>Accuracy: </dt>
+                            <dd>100%</dd>
+                        </li>
+                        <li id = "ppCol">
+                            <dt>PP</dt>
+                            <dd>48</dd>
+                        </li>
+                    </div>
+                </ul>
+
+                <ul>
+                    <div class = "moveContainer">
+                        <li id = "levelCol">L15</li>
+                        <li id = "nameCol">Water Gun</li>
+                        <li id = "typeCol">
+                            <img src = "/public/water.png"/>
+                        </li>
+                        <li id = "accCol">
+                            <dt>Accuracy: </dt>
+                            <dd>100%</dd>
+                        </li>
+                        <li id = "ppCol">
+                            <dt>PP</dt>
+                            <dd>48</dd>
+                        </li>
+                    </div>
+                </ul>
+            </ul>
+            <h4>TM/HM:</h4>
+            <ul id = "tmSet">
+
+            </ul>
+            <h4>Egg:</h4>
+            <ul id = "eggSet">
+
+            </ul>
+            <h4>Tutor:</h4>
+            <ul id = "tutorSet">
+
+            </ul>
+            </div>
+        </div>
+        <div id="altWrapper">
+            <h1 id = "moveDescName">Move name</h1>
+            <dt id = "typeDescTitle">Type</dt>
+            <div id = "typeDescWrapper">
+                <dd id = "typeDesc1"> <img id = "desc1Img" src = "/public/normal.png"> </dd>
+                <dd id = "typeDesc2"><img id = "desc2Img" src = "/public/normal.png"></dd>
+            </div>
+            <dh id = "basePowerWrapper">
+                <dt>Base power:</dt>
+                <dd id = "basePowerNum">40</dd>
+            </dh>
+            <dh id = "accuracyDescWrapper">
+                <dt id = "accuracyDescTitle">Accuracy</dt>
+                <dd id = "accuracyDescNumber">100%</dd>
+            </dh>
+            <dh id="ppDescWrapper">
+                <dt id = "ppDescTitle">PP</dt>
+                <dd id = "ppDescNumber">2</dd>
+            </dh>
+            <p id = "moveShortDesc">Description</p>
+        </div>
+    </div>
+    </div>
+
+    <div id = "loadingScreen">
+        <img id = "loadingCircle" src = "/public/pokeball.png"/>
+        <p>Loading...</p>
+    </div>
+    <script src = "templateScript.js"></script>
+    </body>
+</html>
